@@ -1,0 +1,8 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{color-scheme:dark}
+body{background:#070D18;color:#E6EEF8;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.card{background:linear-gradient(180deg,#0F1B2E,#0C1626);border:1px solid #1E344D;border-radius:16px}
+.badge{font-size:11px;padding:3px 8px;border-radius:999px;font-weight:700;letter-spacing:.04em}
+.scrollthin::-webkit-scrollbar{height:6px;width:6px}.scrollthin::-webkit-scrollbar-thumb{background:#23405E;border-radius:99px}
+@keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.3}}
+.live-dot{animation:pulseDot 1.2s infinite}
