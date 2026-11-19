@@ -1,0 +1,1 @@
+SELECT t.transaction_id, u.user_key, m.merchant_key, CAST(strftime(t.event_time,'%Y%m%d') AS INT) AS date_key, t.amount, t.risk_score, (t.status!='APPROVED') AS is_fraud, t.status FROM {{ ref('stg_transactions') }} t LEFT JOIN {{ ref('dim_user') }} u ON t.user_id=u.user_id LEFT JOIN {{ ref('dim_merchant') }} m ON t.merchant_id=m.merchant_id
